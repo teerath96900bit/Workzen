@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workzen - Project Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Workzen</h2>
+        <p>Plan smarter. Work better.</p>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h1>Welcome to Workzen</h1>
+            <p>Manage projects, organize tasks, and work together with your team.</p>
+        </section>
+
+        <section class="auth-box">
+            <h2>Create Your Account</h2>
+
+            <form id="register-form">
+                <input type="text" id="name"
+                    placeholder="Full Name" required>
+
+                <input type="email" id="email"
+                    placeholder="Email Address" required>
+
+                <input type="password" id="password"
+                    placeholder="Password (minimum 8 characters)"
+                    minlength="8" required>
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p id="message"></p>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="#" id="show-login">Login</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Workzen. Built for better teamwork.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

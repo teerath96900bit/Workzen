@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Workzen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h2>Workzen</h2>
+        <div class="user-controls">
+            <span id="user-name">Welcome, User</span>
+            <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Area -->
+    <div class="dashboard-container">
+        
+        <!-- Sidebar for Projects -->
+        <aside class="sidebar">
+            <h3>My Projects</h3>
+            <ul id="project-list">
+                <!-- Projects yahan JS se aayenge -->
+            </ul>
+            <button id="new-project-btn" class="btn-primary">+ New Project</button>
+        </aside>
+
+        <!-- Kanban Board Area -->
+        <main class="board-area">
+            <div class="board-header">
+                <h2 id="current-project-title">Select a Project</h2>
+                <button id="new-task-btn" class="btn-primary" style="display: none;">+ Add Task</button>
+            </div>
+
+            
+<!-- Team Members Section -->
+<section id="team-members-section" style="display: none; margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px;">
+    <h3>Team Members</h3>
+
+    <ul id="team-members-list">
+        <li>Loading members...</li>
+    </ul>
+
+    <form id="add-member-form" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
+        <input
+            type="email"
+            id="member-email"
+            placeholder="Enter registered user's email"
+            required
+        >
+        <button type="submit" id="add-member-btn" class="btn-primary">
+            Add Member
+        </button>
+    </form>
+
+    <p id="member-message" role="status" aria-live="polite"></p>
+</section>
+
+
+            <div class="kanban-board" id="kanban-board" style="display: none;">
+                <!-- To Do Column -->
+                <div class="kanban-column" id="col-todo">
+                    <h3>To Do</h3>
+                    <div class="task-list" data-status="todo"></div>
+                </div>
+
+                <!-- In Progress Column -->
+                <div class="kanban-column" id="col-in_progress">
+                    <h3>In Progress</h3>
+                    <div class="task-list" data-status="in_progress"></div>
+                </div>
+
+                <!-- Done Column -->
+                <div class="kanban-column" id="col-done">
+                    <h3>Done</h3>
+                    <div class="task-list" data-status="done"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- TASK DETAILS MODAL (Yeh part miss ho gaya hoga) -->
+    <div id="task-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 id="modal-task-title">Task Title</h2>
+            <p id="modal-task-desc">Task description goes here...</p>
+            
+            <div class="assign-section">
+                <label><strong>Assigned To:</strong></label>
+                <select id="assignee-select">
+                    <option value="">Unassigned</option>
+                </select>
+            </div>
+
+            <div class="attachments-section">
+                <h3>Attachments & Files</h3>
+                <div id="attachments-list" class="attachments-list"></div>
+                <div class="upload-box">
+                    <input type="file" id="file-input">
+                    <button id="upload-btn" class="btn-secondary">Upload File</button>
+                </div>
+            </div>
+
+            <div class="comments-section">
+                <h3>Discussion</h3>
+                <div id="comments-list" class="comments-list"></div>
+                <div class="add-comment-box">
+                    <input type="text" id="new-comment" placeholder="Write a comment...">
+                    <button id="post-comment-btn" class="btn-primary">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REAL-TIME SOCKET SCRIPT -->
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+    
+    <!-- MAIN SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

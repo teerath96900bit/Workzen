@@ -1,0 +1,436 @@
+/* Google Fonts Import for a clean, modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.navbar h2 {
+    color: #4f46e5; /* Primary Indigo Color */
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar p {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* --- Main Layout --- */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* --- Welcome Section --- */
+.welcome {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.welcome p {
+    color: #4b5563;
+    font-size: 1.1rem;
+}
+
+/* --- Authentication Box --- */
+.auth-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-box h2 {
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    font-size: 1.5rem;
+}
+
+/* --- Form Elements --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Utility Classes --- */
+#message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+.login-text {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.login-text a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* --- Dashboard Specific Styles --- */
+.dashboard-body {
+    background-color: #f4f7f6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 0.5rem 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-primary {
+    background-color: #4f46e5;
+    padding: 0.6rem 1rem;
+}
+
+.dashboard-container {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+#project-list {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+#project-list li {
+    padding: 0.8rem;
+    background-color: #f9fafb;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #374151;
+    transition: background 0.2s;
+}
+
+#project-list li:hover, #project-list li.active {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+/* --- Kanban Board --- */
+.board-area {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    min-height: 0;
+}
+
+.kanban-column {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    width: 320px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.kanban-column h3 {
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.task-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* --- Task Cards --- */
+.task-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border-left: 4px solid #4f46e5;
+}
+
+.task-card h4 {
+    font-size: 0.95rem;
+    color: #111827;
+    margin-bottom: 0.4rem;
+}
+
+.task-card p {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* --- Attachments Styles --- */
+.attachments-section {
+    margin: 1.5rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.attachment-item a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.attachment-item a:hover {
+    text-decoration: underline;
+}
+
+.upload-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upload-box input[type="file"] {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+}
+
+
+/* ===== TASK DETAILS MODAL FIX ===== */
+
+#task-modal.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#task-modal.modal[style*="display: flex"] {
+    display: flex !important;
+}
+
+#task-modal .modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+#task-modal .close-btn {
+    position: sticky;
+    top: 0;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+    line-height: 1;
+    z-index: 2;
+}
+
+#task-modal .close-btn:hover {
+    color: #e53935;
+}
+
+#task-modal .attachments-section,
+#task-modal .comments-section {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+#task-modal .attachments-list,
+#task-modal .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+#task-modal .upload-box,
+#task-modal .add-comment-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#task-modal .add-comment-box input {
+    flex: 1;
+    min-width: 150px;
+}
+
+#task-modal input,
+#task-modal select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    #task-modal.modal {
+        padding: 10px;
+    }
+
+    #task-modal .modal-content {
+        padding: 18px;
+        max-height: 92vh;
+    }
+}
